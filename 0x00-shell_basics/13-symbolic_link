@@ -1,2 +1,2 @@
 #!/bin/bash
-read __ls__
+readlink __ls__
