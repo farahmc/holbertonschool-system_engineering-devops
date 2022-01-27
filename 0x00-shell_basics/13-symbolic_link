@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l __ls__
+read __ls__
