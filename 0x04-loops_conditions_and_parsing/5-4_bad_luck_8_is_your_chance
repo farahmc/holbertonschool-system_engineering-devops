@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-# Bash script to display "Best School" 10 times, replacing line 4 & 8 with "bad luck"
+# Bash script to display "Best School" 10 times, replacing line 4 with "bad luck"
+# and line 8 with "good luck"
 i=1
 while [ $i -le 10 ]
       do
 	if ((i == 4)); then
 	    echo "bad luck"
 	elif ((i == 8)); then
-	    echo "bad luck"
+	    echo "good luck"
 	else
 	    echo "Best School"
 	fi
