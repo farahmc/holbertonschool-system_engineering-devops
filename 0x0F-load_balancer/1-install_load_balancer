@@ -8,7 +8,7 @@ add-apt-repository ppa:vbernat/haproxy-2.0
 apt-get install haproxy=2.0.\*
 service haproxy start
 
-echo "ENABLED=1" > /etc/default/haproxy
+echo "ENABLED=1" >> /etc/default/haproxy
 
 config_haproxy="
 frontend myfrontend
@@ -20,6 +20,6 @@ backend myserver
 	server 4324-web-01 3.92.23.198
 	server 4324-web-02 54.174.101.66"
 
-echo "$config_haproxy" > /etc/haproxy/haproxy.cgf
+echo "$config_haproxy" >> test
 
-# service haproxy restart
+service haproxy restart
