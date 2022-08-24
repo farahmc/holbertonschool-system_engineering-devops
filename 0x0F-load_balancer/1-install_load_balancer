@@ -9,9 +9,11 @@ apt-get -y install haproxy
 printf "\n
 frontend myfrontend
 	bind *:80
+	mode http
 	default_backend myservers
 
 backend myserver
+	mode http
 	balance roundrobin
 	server 4324-web-01 3.92.23.198
 	server 4324-web-02 54.174.101.66" >> /etc/haproxy/haproxy.cfg
