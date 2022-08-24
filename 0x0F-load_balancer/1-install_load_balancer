@@ -4,12 +4,9 @@
 # Make sure that HAproxy can be managed via an init script
 
 apt-get -y update
-apt-get -y install haproxy=2.0.\*
-service haproxy start
+apt-get -y install haproxy
 
-echo "ENABLED=1" >> /etc/default/haproxy
-
-config_haproxy="
+printf "\n
 frontend myfrontend
 	bind *:80
 	default_backend myservers
@@ -17,8 +14,6 @@ frontend myfrontend
 backend myserver
 	balance roundrobin
 	server 4324-web-01 3.92.23.198
-	server 4324-web-02 54.174.101.66"
+	server 4324-web-02 54.174.101.66" >> /etc/haproxy/haproxy.cfg
 
-echo "$config_haproxy" >> /etc/haproxy/haproxy.cfg
-
-service haproxy restart
+service haproxy start
