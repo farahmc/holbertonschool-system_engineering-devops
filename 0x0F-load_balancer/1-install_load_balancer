@@ -10,7 +10,7 @@ printf "\n
 frontend myfrontend
 	bind *:80
 	mode http
-	default_backend myservers
+	default_backend myserver
 
 backend myserver
 	mode http
