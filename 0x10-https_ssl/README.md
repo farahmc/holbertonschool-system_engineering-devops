@@ -34,3 +34,14 @@ Requirements:
 - When querying the root of your domain name, the page returned must contain `Holberton School`
 - Share your HAproxy config as an answer file (`/etc/haproxy/haproxy.cfg`)
 The file `1-haproxy_ssl_termination` must be your HAproxy configuration file
+
+## Advanced Task
+
+### 2. No loophole in your website traffic
+Configure HAproxy to automatically redirect HTTP traffic to HTTPS.
+Requirements:
+- This should be transparent to the user
+- HAproxy should return a `301`
+- HAproxy should redirect HTTP traffic to HTTPS
+- Share your HAproxy config as an answer file (`/etc/haproxy/haproxy.cfg`)
+The file `100-redirect_http_to_https` must be your HAproxy configuration file
