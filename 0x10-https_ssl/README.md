@@ -9,7 +9,7 @@ Requirements:
 - Add the subdomain `lb-01` to your domain, point it to your `lb-01` IP
 - Add the subdomain `web-01` to your domain, point it to your `web-01` IP
 - Add the subdomain `web-02` to your domain, point it to your `web-02` IP
-Your Bash script must accept 2 arguments:
+\nYour Bash script must accept 2 arguments:
 - 1. `domain`:
     - type: string
     - what: domain name to audit
