@@ -43,5 +43,5 @@ frontend myfrontend
 backend myserver
         mode http
         balance roundrobin
-        server 4324-web-01 3.92.23.198
-        server 4324-web-02 54.174.101.66
+        server 4324-web-01 3.92.23.198:80 check
+        server 4324-web-02 54.174.101.66:80 check
