@@ -8,7 +8,7 @@ domain_info (){
 }
 
 if [[ $# -eq 2 ]]; then
-   domain_info "$1" "$2"
+   domain_info $1 $2
 else
     for subdomain in www lb-01 web-01 web-02; do
 	domain_info $1 $subdomain
