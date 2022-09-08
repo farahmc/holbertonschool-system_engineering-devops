@@ -3,5 +3,5 @@
 DATE=`date +"%d%m%Y"`
 PASS=$1
 
-mysqldump --opt --protocol=TCP --user=root --password=${PASS} --host=3.92.23.198 tyrell_corp > backup.sql
+sudo mysqldump --opt --uroot --password=${PASS} tyrell_corp > backup.sql
 tar -czvf $DATE.tgz backup.sql
