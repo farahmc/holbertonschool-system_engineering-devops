@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-DATE=`date +"%d%m%Y"`
+DATE=`date +%d-%m-%Y`
 PASS=$1
 
-sudo mysqldump --opt --uroot --password=${PASS} tyrell_corp > backup.sql
-tar -czvf $DATE.tgz backup.sql
+sudo mysqldump --opt -uroot -password=${PASS} tyrell_corp > backup.sql
+tar -czvf $DATE.tar.gz backup.sql
