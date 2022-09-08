@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
+# create mysql dump of all databases and compress to a tar.gz archive
 
 DATE=`date +%d-%m-%Y`
 PASS=$1
 
-sudo mysqldump --opt -uroot -password=${PASS} tyrell_corp > backup.sql
+sudo mysqldump --opt -uroot -password=${PASS} --all-databases > backup.sql
 tar -czvf $DATE.tar.gz backup.sql
