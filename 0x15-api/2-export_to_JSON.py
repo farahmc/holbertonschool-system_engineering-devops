@@ -16,9 +16,9 @@ if __name__ == "__main__":
     todo = r_todo.json()
     json_filename = id + ".json"
 
-    todo_dict = {}
     todo_list = []
     for task in todo:
+        todo_dict = {}
         todo_dict["task"] = task['title']
         todo_dict["completed"] = task['completed']
         todo_dict["username"] = employee['username']
