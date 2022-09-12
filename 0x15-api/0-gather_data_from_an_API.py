@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Write a Python script that returns information about a given employee's
+""" return information about a given employee's
  TODO list progress using a REST API. The script must accept an integer as
  a parameter, which is the employee ID """
 
