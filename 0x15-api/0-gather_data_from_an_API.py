@@ -3,8 +3,8 @@
  TODO list progress using a REST API. The script must accept an integer as
  a parameter, which is the employee ID """
 
-from sys import argv
 from requests import get
+from sys import argv
 
 if __name__ == "__main__":
     id = argv[1]
