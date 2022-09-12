@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" export data in JSON format"""
+""" export all employees in JSON format"""
 
 import json
 from requests import get
