@@ -9,7 +9,7 @@ if __name__ == "__main__":
     r_employee = get('https://jsonplaceholder.typicode.com/users/')
     employee = r_employee.json()
 
-    user_dict = {}
+    employee_dict = {}
     for e in employee:
         todo_list = []
         id = e['id']
@@ -22,7 +22,7 @@ if __name__ == "__main__":
             todo_dict["task"] = task['title']
             todo_dict["completed"] = task['completed']
             todo_list.append(todo_dict)
-        user_dict[id] = todo_list
+        employee_dict[id] = todo_list
 
     with open("todo_all_employees.json", "w") as json_file:
-        json.dump(user_dict, json_file)
+        json.dump(employee_dict, json_file)
