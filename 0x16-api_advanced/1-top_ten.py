@@ -6,7 +6,7 @@ import requests
 
 def top_ten(subreddit):
     """ return titles of first 10 hot posts
-    if not a valid subreddit, print None 
+    if not a valid subreddit, print None
     do not follow redirects """
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5)\
             AppleWebKit/537.36 (KHTML, like Gecko) Cafari/537.36'}
