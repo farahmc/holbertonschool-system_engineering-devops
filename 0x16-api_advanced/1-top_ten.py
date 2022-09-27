@@ -14,12 +14,7 @@ def top_ten(subreddit):
     r_hot = requests.get(url, headers=headers, allow_redirects=False)
     if r_hot.ok is False:
         print("None")
-        return None
-
-    hot_posts = r_hot.json()
-    top_10 = []
-    for i in range(10):
-        top_10.append(hot_posts['data']['children'][i]['data']['title'])
-    for title in top_10:
-        print(title)
-    return 1
+    else:
+        hot_posts = r_hot.json()
+        for i in range(10):
+            print(hot_posts['data']['children'][i]['data']['title'])
