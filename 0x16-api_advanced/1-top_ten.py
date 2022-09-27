@@ -2,7 +2,6 @@
 """ queries the Reddit API and prints the titles of the
  first 10 hot posts listed for a given subreddit """
 import requests
-from sys import argv
 
 
 def top_ten(subreddit):
@@ -11,7 +10,7 @@ def top_ten(subreddit):
     do not follow redirects """
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5)\
             AppleWebKit/537.36 (KHTML, like Gecko) Cafari/537.36'}
-    url = "https://www.reddit.com/r/{}/hot.json".format(argv[1])
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     r_hot = requests.get(url, headers=headers)
     if r_hot.ok is False:
         print("None")
