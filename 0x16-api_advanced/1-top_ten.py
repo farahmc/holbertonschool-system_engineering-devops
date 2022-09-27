@@ -16,11 +16,9 @@ def top_ten(subreddit):
         return None
 
     hot_posts = r_hot.json()
-    i = 0
     top_10 = []
-    while i < 10:
+    for i in range(10):
         top_10.append(hot_posts['data']['children'][i]['data']['title'])
-        i += 1
     for title in top_10:
         print(title)
     return 1
