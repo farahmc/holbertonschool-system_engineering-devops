@@ -20,4 +20,3 @@ def number_of_subscribers(subreddit):
         if k == "subscribers":
             number_of_subs = v
     return(number_of_subs)
-
