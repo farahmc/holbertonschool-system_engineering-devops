@@ -12,6 +12,7 @@ def top_ten(subreddit):
     url = "https://www.reddit.com/r/{}/hot.json".format(argv[1])
     r_hot = requests.get(url, headers=headers)
     if r_hot.ok is False:
+        print("None")
         return None
 
     hot_posts = r_hot.json()
@@ -19,6 +20,7 @@ def top_ten(subreddit):
     top_10 = []
     while i < 10:
         top_10.append(hot_posts['data']['children'][i]['data']['title'])
-        i += 1    
+        i += 1   
     for title in top_10:
         print(title)
+    return 1
