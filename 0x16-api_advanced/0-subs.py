@@ -19,4 +19,4 @@ def number_of_subscribers(subreddit):
     for k, v in subs['data'].items():
         if k == "subscribers":
             number_of_subs = v
-    return(number_of_subs)
+    return number_of_subs
